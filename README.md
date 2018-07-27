@@ -1,0 +1,1 @@
+# Captcha-to-Text-Browser-Extension
