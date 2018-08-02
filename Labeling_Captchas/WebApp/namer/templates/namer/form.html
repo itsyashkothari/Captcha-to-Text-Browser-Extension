@@ -1,0 +1,27 @@
+
+<center>
+<h1>	{{msg}}</h1>
+<h1>Total = {{total}}</h1><br>
+<h1>Left = {{not_done}}</h1><br>
+<h1>{{score}}</h1><br>
+
+<img src="{{piclink}}" height = '200' width = '200' alt="My image"/>
+<form method="POST" action="" id = "abc">
+{% csrf_token %}
+  <input type="hidden" value="{{piclink}}" name="fn">
+<input type="text" name="val" size ="1" style="font-size: 75px" id = "fi"   autocomplete="off" >
+
+</form>
+</center>
+<script type="text/javascript">document.getElementById('fi').focus();</script>
+
+<script type="text/javascript">
+var text = document.getElementById("fi");
+var form = document.getElementById("abc");
+text.onkeyup = function() {
+    if( text.value.length == 1 ) {
+    	console.log("hello");
+        form.submit();
+  }
+}
+</script>

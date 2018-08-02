@@ -1,0 +1,10 @@
+
+{% block content %}
+  <h2>Login</h2>
+  <form method="POST" action="" id = "abc">
+{% csrf_token %}
+<input type="text" name="userid" id = "us">
+<input type="text" name="password" id = "ps">
+<button type="submit" id = "sub">Upload text</button>
+</form>
+{% endblock %}
